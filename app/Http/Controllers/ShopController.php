@@ -19,15 +19,15 @@ class ShopController extends Controller
      */
     public function details($id)
     {
-        return view('details');
+        return view('details', compact('id'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function cart()
     {
-        //
+        return view('cart');
     }
 
     /**
