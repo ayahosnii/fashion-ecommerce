@@ -1,9 +1,18 @@
 <?php
 
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\admin\ProductController;
+
+use App\Http\Controllers\Auth\LoginController;
+
+use App\Http\Controllers\CategoryController;
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +27,3 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Auth::routes();
-
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/shop', [ShopController::class, 'index'])->name('shop');
-Route::get('/details/{id}', [ShopController::class, 'details'])->name('details');

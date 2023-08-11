@@ -6,17 +6,15 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/sass/app.scss',
                 'resources/js/app.js',
             ],
             refresh: true,
         }),
         vue({
             template: {
-                transformAssetUrls: {
-                    base: null,
-                    includeAbsolute: false,
-                },
+                compilerOptions: {
+                    isCustomElement: (tag) => ['md-linedivider'].includes(tag),
+                }
             },
         }),
     ],
@@ -25,4 +23,13 @@ export default defineConfig({
             vue: 'vue/dist/vue.esm-bundler.js',
         },
     },
+    devServer: {
+        proxy: {
+            '^/api': {
+                target: 'http://localhost:8000',
+                changeOrigin: true,
+            },
+        },
+    },
+
 });

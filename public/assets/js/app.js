@@ -324,6 +324,7 @@
             });
         }
     };
+/*
 
     // Bind countdown plugin
     RESHOP.timerCountDown = function() {
@@ -375,6 +376,7 @@
             });
         }
     };
+*/
 
 
     // Blog Post Gallery
@@ -672,7 +674,6 @@
         RESHOP.testimonialSlider();
         RESHOP.appConfiguration();
         RESHOP.isotopeFilter();
-        RESHOP.timerCountDown();
         RESHOP.initInputCounter();
         RESHOP.blogPostGallery();
         RESHOP.blogPostVideo();

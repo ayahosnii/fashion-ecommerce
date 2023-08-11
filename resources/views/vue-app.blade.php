@@ -1,5 +1,6 @@
 @extends('layouts.base')
-
 @section('content')
-    <details-component :id="1"></details-component>
+    <div class="vue">
+        <!-- ...... -->
+    </div>
 @endsection
