@@ -27,5 +27,5 @@ use Illuminate\Support\Facades\View;
 
 
 Route::get('/{any}', function () {
-    return view('vue-app'); // Replace 'vue-app' with the actual name of your Blade view
+    return view('vue-app');
 })->where('any', '.*');
